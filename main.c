@@ -24,6 +24,8 @@ int main(int argc, char *argv[]) {
       user_input[strcspn(user_input, "\n")] = '\0';
 
       if(!strcmp("exit", user_input)) break;
+
+      if(!strcmp("clear", user_input)) cls();
     
       if(!strncmp(user_input, "echo ", sizeof("echo ") - 1)) {
         printf("%s \n", user_input + 5);
