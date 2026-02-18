@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/armndo/Projects/C/custom-shell/include
+C_INCLUDES = -I/home/armndo/Projects/C/msh/include
 
 C_FLAGS = 
 

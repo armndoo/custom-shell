@@ -1,1 +1,0 @@
-/usr/bin/cc -Wl,--dependency-file=CMakeFiles/custom_shell.dir/link.d CMakeFiles/custom_shell.dir/src/main.c.o CMakeFiles/custom_shell.dir/src/path_utils.c.o -o custom_shell

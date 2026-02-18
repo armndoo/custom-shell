@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/armndo/Projects/C/custom-shell
+CMAKE_SOURCE_DIR = /home/armndo/Projects/C/msh
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/armndo/Projects/C/custom-shell/build
+CMAKE_BINARY_DIR = /home/armndo/Projects/C/msh/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/armndo/Projects/C/custom-shell/build/CMakeFiles /home/armndo/Projects/C/custom-shell/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/armndo/Projects/C/msh/build/CMakeFiles /home/armndo/Projects/C/msh/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/armndo/Projects/C/custom-shell/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/armndo/Projects/C/msh/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named custom_shell
+# Target rules for targets named msh
 
 # Build rule for target.
-custom_shell: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 custom_shell
-.PHONY : custom_shell
+msh: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 msh
+.PHONY : msh
 
 # fast build rule for target.
-custom_shell/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_shell.dir/build.make CMakeFiles/custom_shell.dir/build
-.PHONY : custom_shell/fast
+msh/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/build
+.PHONY : msh/fast
 
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_shell.dir/build.make CMakeFiles/custom_shell.dir/src/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/src/main.c.o
 .PHONY : src/main.c.o
 
 src/main.i: src/main.c.i
@@ -142,7 +142,7 @@ src/main.i: src/main.c.i
 
 # target to preprocess a source file
 src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_shell.dir/build.make CMakeFiles/custom_shell.dir/src/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/src/main.c.i
 .PHONY : src/main.c.i
 
 src/main.s: src/main.c.s
@@ -150,7 +150,7 @@ src/main.s: src/main.c.s
 
 # target to generate assembly for a file
 src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_shell.dir/build.make CMakeFiles/custom_shell.dir/src/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/src/main.c.s
 .PHONY : src/main.c.s
 
 src/path_utils.o: src/path_utils.c.o
@@ -158,7 +158,7 @@ src/path_utils.o: src/path_utils.c.o
 
 # target to build an object file
 src/path_utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_shell.dir/build.make CMakeFiles/custom_shell.dir/src/path_utils.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/src/path_utils.c.o
 .PHONY : src/path_utils.c.o
 
 src/path_utils.i: src/path_utils.c.i
@@ -166,7 +166,7 @@ src/path_utils.i: src/path_utils.c.i
 
 # target to preprocess a source file
 src/path_utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_shell.dir/build.make CMakeFiles/custom_shell.dir/src/path_utils.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/src/path_utils.c.i
 .PHONY : src/path_utils.c.i
 
 src/path_utils.s: src/path_utils.c.s
@@ -174,7 +174,7 @@ src/path_utils.s: src/path_utils.c.s
 
 # target to generate assembly for a file
 src/path_utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_shell.dir/build.make CMakeFiles/custom_shell.dir/src/path_utils.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/src/path_utils.c.s
 .PHONY : src/path_utils.c.s
 
 # Help Target
@@ -185,7 +185,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... custom_shell"
+	@echo "... msh"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

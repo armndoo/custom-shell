@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/armndo/Projects/C/custom-shell/src/main.c" "CMakeFiles/custom_shell.dir/src/main.c.o" "gcc" "CMakeFiles/custom_shell.dir/src/main.c.o.d"
-  "/home/armndo/Projects/C/custom-shell/src/path_utils.c" "CMakeFiles/custom_shell.dir/src/path_utils.c.o" "gcc" "CMakeFiles/custom_shell.dir/src/path_utils.c.o.d"
-  "" "custom_shell" "gcc" "CMakeFiles/custom_shell.dir/link.d"
+  "/home/armndo/Projects/C/msh/src/main.c" "CMakeFiles/msh.dir/src/main.c.o" "gcc" "CMakeFiles/msh.dir/src/main.c.o.d"
+  "/home/armndo/Projects/C/msh/src/path_utils.c" "CMakeFiles/msh.dir/src/path_utils.c.o" "gcc" "CMakeFiles/msh.dir/src/path_utils.c.o.d"
+  "" "msh" "gcc" "CMakeFiles/msh.dir/link.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

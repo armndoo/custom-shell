@@ -1,3 +1,3 @@
-/home/armndo/Projects/C/custom-shell/build/CMakeFiles/custom_shell.dir
-/home/armndo/Projects/C/custom-shell/build/CMakeFiles/edit_cache.dir
-/home/armndo/Projects/C/custom-shell/build/CMakeFiles/rebuild_cache.dir
+/home/armndo/Projects/C/msh/build/CMakeFiles/msh.dir
+/home/armndo/Projects/C/msh/build/CMakeFiles/edit_cache.dir
+/home/armndo/Projects/C/msh/build/CMakeFiles/rebuild_cache.dir

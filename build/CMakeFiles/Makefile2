@@ -54,20 +54,20 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/armndo/Projects/C/custom-shell
+CMAKE_SOURCE_DIR = /home/armndo/Projects/C/msh
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/armndo/Projects/C/custom-shell/build
+CMAKE_BINARY_DIR = /home/armndo/Projects/C/msh/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/custom_shell.dir/all
+all: CMakeFiles/msh.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/custom_shell.dir/codegen
+codegen: CMakeFiles/msh.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,40 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/custom_shell.dir/clean
+clean: CMakeFiles/msh.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/custom_shell.dir
+# Target rules for target CMakeFiles/msh.dir
 
 # All Build rule for target.
-CMakeFiles/custom_shell.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_shell.dir/build.make CMakeFiles/custom_shell.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_shell.dir/build.make CMakeFiles/custom_shell.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/armndo/Projects/C/custom-shell/build/CMakeFiles --progress-num=1,2,3 "Built target custom_shell"
-.PHONY : CMakeFiles/custom_shell.dir/all
+CMakeFiles/msh.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/armndo/Projects/C/msh/build/CMakeFiles --progress-num=1,2,3 "Built target msh"
+.PHONY : CMakeFiles/msh.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/custom_shell.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/armndo/Projects/C/custom-shell/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/custom_shell.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/armndo/Projects/C/custom-shell/build/CMakeFiles 0
-.PHONY : CMakeFiles/custom_shell.dir/rule
+CMakeFiles/msh.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/armndo/Projects/C/msh/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/msh.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/armndo/Projects/C/msh/build/CMakeFiles 0
+.PHONY : CMakeFiles/msh.dir/rule
 
 # Convenience name for target.
-custom_shell: CMakeFiles/custom_shell.dir/rule
-.PHONY : custom_shell
+msh: CMakeFiles/msh.dir/rule
+.PHONY : msh
 
 # codegen rule for target.
-CMakeFiles/custom_shell.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_shell.dir/build.make CMakeFiles/custom_shell.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/armndo/Projects/C/custom-shell/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target custom_shell"
-.PHONY : CMakeFiles/custom_shell.dir/codegen
+CMakeFiles/msh.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/armndo/Projects/C/msh/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target msh"
+.PHONY : CMakeFiles/msh.dir/codegen
 
 # clean rule for target.
-CMakeFiles/custom_shell.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_shell.dir/build.make CMakeFiles/custom_shell.dir/clean
-.PHONY : CMakeFiles/custom_shell.dir/clean
+CMakeFiles/msh.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/clean
+.PHONY : CMakeFiles/msh.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

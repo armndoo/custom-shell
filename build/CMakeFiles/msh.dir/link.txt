@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/msh.dir/link.d CMakeFiles/msh.dir/src/main.c.o CMakeFiles/msh.dir/src/path_utils.c.o -o msh
