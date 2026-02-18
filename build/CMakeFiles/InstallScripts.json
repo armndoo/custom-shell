@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/armndo/Projects/C/custom-shell/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
