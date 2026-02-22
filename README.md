@@ -29,8 +29,9 @@ mkdir build
 cd build
 cmake ..
 make
+```
 
-Usage
+### Usage
 
 Once compiled, the executable can be started from the build directory:
 Bash
@@ -41,5 +42,5 @@ Bash
 
 The shell handles the EOF (End Of File) signal to allow for clean exits and manages memory through a dedicated parsing stage before each execution cycle. The project is structured to separate builtin logic from the core shell engine.
 
-# Why I did this
+## Why I did this
 I wanted to experience some real system programming, I saw this excercise online and I decided to make it from scratc in C. And also because I dont know what I am doing with my life. lol.
