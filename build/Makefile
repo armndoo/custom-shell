@@ -153,6 +153,30 @@ src/builtins.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/src/builtins.c.s
 .PHONY : src/builtins.c.s
 
+src/execute.o: src/execute.c.o
+.PHONY : src/execute.o
+
+# target to build an object file
+src/execute.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/src/execute.c.o
+.PHONY : src/execute.c.o
+
+src/execute.i: src/execute.c.i
+.PHONY : src/execute.i
+
+# target to preprocess a source file
+src/execute.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/src/execute.c.i
+.PHONY : src/execute.c.i
+
+src/execute.s: src/execute.c.s
+.PHONY : src/execute.s
+
+# target to generate assembly for a file
+src/execute.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/src/execute.c.s
+.PHONY : src/execute.c.s
+
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
@@ -237,6 +261,9 @@ help:
 	@echo "... src/builtins.o"
 	@echo "... src/builtins.i"
 	@echo "... src/builtins.s"
+	@echo "... src/execute.o"
+	@echo "... src/execute.i"
+	@echo "... src/execute.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

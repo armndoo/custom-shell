@@ -85,12 +85,12 @@ clean: CMakeFiles/msh.dir/clean
 CMakeFiles/msh.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/armndo/Projects/C/msh/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target msh"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/armndo/Projects/C/msh/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target msh"
 .PHONY : CMakeFiles/msh.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/msh.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/armndo/Projects/C/msh/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/armndo/Projects/C/msh/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/msh.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/armndo/Projects/C/msh/build/CMakeFiles 0
 .PHONY : CMakeFiles/msh.dir/rule
@@ -102,7 +102,7 @@ msh: CMakeFiles/msh.dir/rule
 # codegen rule for target.
 CMakeFiles/msh.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/msh.dir/build.make CMakeFiles/msh.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/armndo/Projects/C/msh/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target msh"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/armndo/Projects/C/msh/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Finished codegen for target msh"
 .PHONY : CMakeFiles/msh.dir/codegen
 
 # clean rule for target.

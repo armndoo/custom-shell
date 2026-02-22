@@ -9,5 +9,6 @@ add_executable(msh
     src/parser.c 
     src/builtins.c
     src/path_utils.c
+    src/execute.c
 )
 target_include_directories(msh PUBLIC include)

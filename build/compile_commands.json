@@ -22,5 +22,11 @@
   "command": "/usr/bin/cc  -I/home/armndo/Projects/C/msh/include -g -std=gnu99 -o CMakeFiles/msh.dir/src/path_utils.c.o -c /home/armndo/Projects/C/msh/src/path_utils.c",
   "file": "/home/armndo/Projects/C/msh/src/path_utils.c",
   "output": "CMakeFiles/msh.dir/src/path_utils.c.o"
+},
+{
+  "directory": "/home/armndo/Projects/C/msh/build",
+  "command": "/usr/bin/cc  -I/home/armndo/Projects/C/msh/include -g -std=gnu99 -o CMakeFiles/msh.dir/src/execute.c.o -c /home/armndo/Projects/C/msh/src/execute.c",
+  "file": "/home/armndo/Projects/C/msh/src/execute.c",
+  "output": "CMakeFiles/msh.dir/src/execute.c.o"
 }
 ]
