@@ -1,8 +1,12 @@
+#include <asm-generic/errno-base.h>
+#include <asm-generic/errno.h>
 #include <complex.h>
 #include <linux/limits.h>
+#include <signal.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include "path_utils.h"
 
@@ -12,8 +16,16 @@ int exec_echo(char** argv) {
     return 1;
   } else {
     for(int i = 1; argv[i] != NULL; i++) {
-      printf("%s ", argv[i]);
-    }
+      char* to_print = argv[i];
+      if(strchr(argv[i], '$')) {
+        char* env_value = getenv(argv[i] +1);
+        if(env_value == NULL) to_print = "";
+        if(env_value != NULL) {
+          to_print = env_value;
+        }
+      } 
+        printf("%s ", to_print);
+      }
     printf("\n");
     return 1;
   }
@@ -58,7 +70,20 @@ int exec_type(char** argv) {
 }
 
 int exec_exit() {
-  exit(1);
+  exit(0);
+}
+
+int exec_cd(char* dir) {
+  char* HOME = strdup(getenv("HOME"));
+  if(!dir) {
+    chdir(HOME);
+    return 1;
+  }
+  if (chdir(dir) != 0) {
+    perror("cd");
+  }
+  free(HOME);
+  return 0;
 }
 
 int dispatcher(char** argv) {
@@ -72,6 +97,10 @@ int dispatcher(char** argv) {
   }
   if(!strcmp(argv[0],"exit")) {
     exec_exit();
+    return 1;
+  }
+  if(!strcmp(argv[0], "cd")) {
+    exec_cd(argv[1]);
     return 1;
   }
   return 0;

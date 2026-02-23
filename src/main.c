@@ -18,6 +18,14 @@ static inline void cls() {
   printf("\033[H\033[2J");
 }
 
+void free_memory(char** args) {
+    if(!args) return;
+    for(int i = 0; args[i] != NULL; i++) {
+        free(args[i]);
+    }
+    free(args);
+}
+
 
 int main(void) {
   setbuf(stdout, NULL);
@@ -25,35 +33,46 @@ int main(void) {
 
   char** args;
   char* which_res;
+  char cwd[1024];
+  
   int dispatch;
   int p_status;
   int last_status;
 
-  pid_t pid = fork();
 
   cls();
   
-  while(1){
-      printf("> ");
-      if(fgets(user_input, sizeof(user_input), stdin)) {
+  while(1) {
+
+    if(getcwd(cwd, sizeof(cwd)) == NULL) {
+        perror("getcwd");
+    }
+    printf("[ %s ] > ", cwd);
+
+    if(fgets(user_input, sizeof(user_input), stdin)) {
         user_input[strcspn(user_input, "\n")] = '\0';
         args = parse_input(user_input);
-        if(!args || !args[0]) continue;
-        dispatch = dispatcher(args);
-        if (dispatch == 0) {
-          which_res = which(args[0]);
-          execute_command(which_res, args);
-          if(which_res == 0) {
-            fprintf(stderr,"%s: command not found \n", user_input);
-          }
-        } else {
-          execute_command(which_res, args);
-          free(which_res);
+
+        if(!args || !args[0]) { 
+            free(args); 
+            continue; 
         }
+
+        dispatch = dispatcher(args);
+
+        if (dispatch == 0) {
+            which_res = which(args[0]);
+            if (which_res != NULL) {
+                execute_command(which_res, args);
+                free(which_res); 
+            } else {
+                fprintf(stderr, "%s: command not found\n", args[0]);
+            }
+        } 
     }
-    free(args);
-  }   
-  return 0;    
+    free_memory(args);
+}
+ return 0;    
 }
 
 
