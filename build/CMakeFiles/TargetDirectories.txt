@@ -1,3 +1,0 @@
-/home/armndo/Projects/C/msh/build/CMakeFiles/msh.dir
-/home/armndo/Projects/C/msh/build/CMakeFiles/edit_cache.dir
-/home/armndo/Projects/C/msh/build/CMakeFiles/rebuild_cache.dir
