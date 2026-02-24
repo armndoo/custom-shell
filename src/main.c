@@ -1,4 +1,5 @@
 #include <inttypes.h>
+#include <signal.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
@@ -12,19 +13,8 @@
 #include "builtins.h"
 #include <sys/wait.h>
 #include <sys/types.h>
+#include "utils.h"
 #include <errno.h>
-
-static inline void cls() {
-  printf("\033[H\033[2J");
-}
-
-void free_memory(char** args) {
-    if(!args) return;
-    for(int i = 0; args[i] != NULL; i++) {
-        free(args[i]);
-    }
-    free(args);
-}
 
 
 int main(void) {
@@ -36,20 +26,32 @@ int main(void) {
   char cwd[1024];
   
   int dispatch;
+  char* input_status;
   int p_status;
   int last_status;
 
-
   cls();
-  
-  while(1) {
+  set_sigs();
+ while(1) {
+     args = NULL;
 
     if(getcwd(cwd, sizeof(cwd)) == NULL) {
         perror("getcwd");
     }
     printf("[ %s ] > ", cwd);
+    fflush(stdout);
 
-    if(fgets(user_input, sizeof(user_input), stdin)) {
+    input_status = fgets(user_input, sizeof(user_input), stdin);
+
+    if(input_status == NULL) {
+        if(feof(stdin)) break;
+        user_input[0] = '\0';
+        clearerr(stdin);
+        continue;
+        
+     }
+
+     if(input_status){
         user_input[strcspn(user_input, "\n")] = '\0';
         args = parse_input(user_input);
 
@@ -70,7 +72,7 @@ int main(void) {
             }
         } 
     }
-    free_memory(args);
+        free_memory(args);
 }
  return 0;    
 }
