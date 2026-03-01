@@ -55,11 +55,11 @@ Bash
 
 # Technical Notes
 
-    * Signal Handling: Manages EOF (End Of File) for graceful session termination.
+   - Signal Handling: Manages EOF (End Of File) for graceful session termination.
 
-    * Memory Management: Implements strict memory cleanup after each parsing cycle to prevent leaks during long-running sessions.
+   - Memory Management: Implements strict memory cleanup after each parsing cycle to prevent leaks during long-running sessions.
 
-    * Process Control: Uses fork, exec, and waitpid logic to manage external process lifecycles and accurately capture exit statuses via system macros.
+   - Process Control: Uses fork, exec, and waitpid logic to manage external process lifecycles and accurately capture exit statuses via system macros.
 
 ---
 ## Why I did this
