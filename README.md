@@ -24,7 +24,8 @@ The system is organized into three distinct logical layers to ensure modularity 
 
 ## Demonstration
 
-*(Insert your demo video or GIF here to showcase the dynamic prompt and command execution)*
+https://github.com/user-attachments/assets/7ef004eb-a6ed-4a38-b5c2-d555623821a4
+
 
 
 
@@ -41,14 +42,16 @@ This project utilizes CMake for build management. To compile the shell, execute 
 mkdir build
 cd build
 cmake ..
-make```
+make
+```
 # Usage
 
 Once compiled, the executable can be launched from the build directory:
 Bash
 
 ```bash
-./msh```
+./msh
+```
 
 # Technical Notes
 
