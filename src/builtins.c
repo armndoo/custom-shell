@@ -1,8 +1,8 @@
 #include <asm-generic/errno-base.h>
+#include <ctype.h>
 #include <asm-generic/errno.h>
 #include <complex.h>
 #include <linux/limits.h>
-#include <signal.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
@@ -69,8 +69,30 @@ int exec_type(char** argv) {
     return 0;
 }
 
-int exec_exit() {
-  exit(0);
+int exec_exit(char** argv) {
+  if(!argv[1]) exit(0);
+  char* err_code = argv[1];
+  bool is_numeric = true;
+  int status = 0;
+  for(int i = 0; err_code[i] != '\0' ; i++) {
+    if(i == 0 && err_code[i] == '-') {
+      continue;
+    } 
+    if(!isdigit(err_code[i])) {
+      is_numeric = false;
+      break;
+    }    
+  }
+  if(!is_numeric) {
+   fprintf(stderr, "exit: %s numeric argument required\n", err_code);
+   return 1;
+  }
+  if(argv[2] != NULL) {
+    fprintf(stderr,"exit: too many arguments\n");
+    return 1;
+  }
+  status = atoi(err_code);
+  exit(status);
 }
 
 int exec_cd(char* dir) {
@@ -87,21 +109,17 @@ int exec_cd(char* dir) {
 }
 
 int dispatcher(char** argv) {
-   if(!strcmp(argv[0],"echo")){
-     exec_echo(argv);
-     return 1;
+  if(!strcmp(argv[0],"echo")){
+    return exec_echo(argv);
   }
   if(!strcmp(argv[0],"type")){
-       exec_type(argv);
-       return 1;
+    return exec_type(argv);
   }
   if(!strcmp(argv[0],"exit")) {
-    exec_exit();
-    return 1;
+    return exec_exit(argv);
   }
   if(!strcmp(argv[0], "cd")) {
-    exec_cd(argv[1]);
-    return 1;
+    return exec_cd(argv[1]);
   }
-  return 0;
+  return -1;
 }
